@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+
+    </head>
+        <style>
+            p { display: inline;}
+            button {font-size: larger;}
+            input {font-size: larger;}
+        </style>
+
+    <body>
+
+        <h1>EC: Part 1 </h1>
+
+        <p><input type="text" id="txt1" value=""></p>
+        <button id="jmp_button" onclick="jump()">   JUMP > </button>
+        <p><input type="text" id="txt2" value=""></p>
+
+        <script>
+            function jump() {
+                
+                let curr1 = document.getElementById("txt1").value;
+                let curr2 = document.getElementById("txt2").value;
+
+                document.getElementById("txt1").value = curr2;
+                document.getElementById("txt2").value = curr1;
+
+
+                if (document.querySelector('#jmp_button').textContent == "   JUMP > "){
+                    document.querySelector('#jmp_button').textContent = ' < JUMP   ';
+                } else {
+                    document.querySelector('#jmp_button').textContent = '   JUMP > ';
+                }
+
+            }
+        </script>
+        
+    </body>
+</html>
